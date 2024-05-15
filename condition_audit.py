@@ -128,6 +128,19 @@ def construct_query(table, entry, timestamp, sites):
                         conditions.append((condition_table, condition_column, condition_value, "EQUALS"))
 
         query = f'SELECT "{table}"."{entry["Column"]}" FROM "{table}"'
+        
+        # if entry["Table"] == "L_QciProfilePredefined":
+        #     if entry["Column"] == "rlfProfileRef":
+        #         query = f'SELECT SUBSTRING("{table}"."{entry["Column"]}" FROM \'RlfProfile=[0-9]+\' FOR \'RlfProfile=0\') AS "rlfProfileRef" FROM "{table}"'
+        #     else:
+        #         query = f'SELECT "{table}"."{entry["Column"]}" FROM "{table}"'
+        if entry["Table"] == "L_QciProfilePredefined" and entry["Column"] == "drxProfileRef":
+            query = f'SELECT SUBSTRING("{table}"."{entry["Column"]}" FROM \'DrxProfile=[0-9]+\') AS "drxProfileRef" FROM "{table}"'
+        # elif entry["Table"] == "L_QciProfilePredefined" and entry["Column"] == "rlfProfileRef":
+        #     query = f'SELECT SUBSTRING("{table}"."{entry["Column"]}" FROM \'DrxProfile=[0-9]+\') AS "drxProfileRef" FROM "{table}"'
+        else:
+            query = f'SELECT "{table}"."{entry["Column"]}" FROM "{table}"'
+        
 
         if conditions:
             for i, (condition_table, condition_column, condition_value, condition_type) in enumerate(conditions):
@@ -160,6 +173,25 @@ def construct_query(table, entry, timestamp, sites):
                 query += f' AND ({site_conditions})'
             else:
                 query += f' WHERE {site_conditions}'
+                
+        if entry["Table"] == "L_QciProfilePredefined" and entry["Column"] == "drxProfileRef":
+            if "WHERE" in query:
+                query += f' AND "{table}"."qciProfilePredefinedId" = \'{entry["Condition_Table_1_Column_Value"]}\''
+            else:
+                query += f' WHERE "{table}"."qciProfilePredefinedId" = \'{entry["Condition_Table_1_Column_Value"]}\''
+
+            query += f'''
+            JOIN "Dimensions" AS dim ON "{table}"."{entry["Join_Column"]}" = dim."DimensionId" AND dim."Market" = '{entry["Condition_Table_2_Column_Value"]}'
+            '''
+        # if entry["Table"] == "L_QciProfilePredefined" and entry["Column"] == "rlfProfileRef":
+        #     if "WHERE" in query:
+        #         query += f' AND "{table}"."qciProfilePredefinedId" = \'{entry["Condition_Table_1_Column_Value"]}\''
+        #     else:
+        #         query += f' WHERE "{table}"."qciProfilePredefinedId" = \'{entry["Condition_Table_1_Column_Value"]}\''
+
+        #     query += f'''
+        #     JOIN "Dimensions" AS dim ON "{table}"."{entry["Join_Column"]}" = dim."DimensionId" AND dim."Market" = '{entry["Condition_Table_2_Column_Value"]}'
+        #     '''
 
         return query
     except KeyError as e:
