@@ -138,6 +138,8 @@ def construct_query(table, entry, timestamp, sites):
             query = f'SELECT SUBSTRING("{table}"."{entry["Column"]}" FROM \'DrxProfile=[0-9]+\') AS "drxProfileRef" FROM "{table}"'
         # elif entry["Table"] == "L_QciProfilePredefined" and entry["Column"] == "rlfProfileRef":
         #     query = f'SELECT SUBSTRING("{table}"."{entry["Column"]}" FROM \'DrxProfile=[0-9]+\') AS "drxProfileRef" FROM "{table}"'
+        # elif entry["Table"] == "L_QciProfilePredefined" and entry["Column"] == "logicalChannelGroupRef":
+        #     query = f'SELECT SUBSTRING("{table}"."{entry["Column"]}" FROM \'vsDataQciTable=default,vsDataLogicalChannelGroup=[0-9]+\' FOR \'vsDataQciTable=default,vsDataLogicalChannelGroup=1\') AS "logicalChannelGroupRef" FROM "{table}"'
         else:
             query = f'SELECT "{table}"."{entry["Column"]}" FROM "{table}"'
         
@@ -192,8 +194,12 @@ def construct_query(table, entry, timestamp, sites):
         #     query += f'''
         #     JOIN "Dimensions" AS dim ON "{table}"."{entry["Join_Column"]}" = dim."DimensionId" AND dim."Market" = '{entry["Condition_Table_2_Column_Value"]}'
         #     '''
-
-        return query
+        # if entry["Table"] == "L_QciProfilePredefined" and entry["Column"] == "logicalChannelGroupRef":
+        #     if "WHERE" in query:
+        #         query += f' AND "{table}"."qciProfilePredefinedId" = \'{entry["Condition_Table_1_Column_Value"]}\''
+        #     else:
+        #         query += f' WHERE "{table}"."qciProfilePredefinedId" = \'{entry["Condition_Table_1_Column_Value"]}\''
+        # return query
     except KeyError as e:
         print(f"KeyError: {e}")
         return None
