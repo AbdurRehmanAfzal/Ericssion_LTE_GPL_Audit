@@ -1,0 +1,126 @@
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=1",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "default"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=1",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci1"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci2"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci3"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci4"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=1",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci5"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci6"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci65"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci66"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci69"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci7"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci70"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci8"
+},
+{
+    "Table": "L_QciProfilePredefined",
+    "Column": "logicalChannelGroupRef",
+    "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=3",
+    "Join_Column": "DimensionId",
+    "Condition_Table_1": "L_QciProfilePredefined",
+    "Condition_Table_1_Column": "qciProfilePredefinedId",
+    "Condition_Table_1_Column_Value": "qci9"
+},

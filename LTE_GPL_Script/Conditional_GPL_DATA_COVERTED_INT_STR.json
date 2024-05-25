@@ -1,0 +1,176 @@
+[
+    {
+        "Table": "ER_L_AdmissionControl",
+        "Column": "dlTransNwBandwidth",
+        "Column_Golden_Value": "1000",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "Dimensions",
+        "Condition_Table_1_Column": "Market",
+        "Condition_Table_1_Column_Value": "NOT (BTC)"
+    },
+    {
+        "Table": "ER_L_AdmissionControl",
+        "Column": "ulTransNwBandwidth",
+        "Column_Golden_Value": "1000",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "Dimensions",
+        "Condition_Table_1_Column": "Market",
+        "Condition_Table_1_Column_Value": "NOT (BTC)"
+    },
+    {
+        "Table": "ER_L_AnrFunctionEUtran",
+        "Column": "anrInterFreqState",
+        "Column_Golden_Value": "ACTIVATED",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "EUtranCellFDD",
+        "Condition_Table_1_Column": "dl256QamEnabled",
+        "Condition_Table_1_Column_Value": "dl256QamEnabled > 1"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "drxProfileRef",
+        "Column_Golden_Value": "DrxProfile=1",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qci1",
+        "Condition_Table_2": "Dimensions",
+        "Condition_Table_2_Column": "Market",
+        "Condition_Table_2_Column_Value": "Panama"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "logicalChannelGroupRef",
+        "Column_Golden_Value": "QciTable=default,LogicalChannelGroup=1",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "default"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "qciSubscriptionQuanta",
+        "Column_Golden_Value": "500",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qciProfilePredefinedId != qci1 & qci5 & qci6 & qci7 & qci8 & qci9"
+    },
+    {
+        "Table": "ER_L_EUtranCellFDD",
+        "Column": "crsGain",
+        "Column_Golden_Value": "0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "KPIs_Cell_Weekly_4G",
+        "Condition_Table_1_Column": "DL PRB Usage",
+        "Condition_Table_1_Column_Value": "DL PRB USAGE > 40%"
+    },
+    {
+        "Table": "ER_L_EUtranCellFDD",
+        "Column": "crsGain",
+        "Column_Golden_Value": "-100",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "KPIs_Cell_Weekly_4G",
+        "Condition_Table_1_Column": "DL PRB Usage",
+        "Condition_Table_1_Column_Value": "30% < DL PRB USAGE <= 40%"
+    },
+    {
+        "Table": "ER_L_EUtranCellFDD",
+        "Column": "crsGain",
+        "Column_Golden_Value": "-300",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "KPIs_Cell_Weekly_4G",
+        "Condition_Table_1_Column": "DL PRB Usage",
+        "Condition_Table_1_Column_Value": "DL PRB USAGE <= 30%"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "rlfProfileRef",
+        "Column_Golden_Value": "RlfProfile=0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "default"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "rlfProfileRef",
+        "Column_Golden_Value": "RlfProfile=0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qci1"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "rlfProfileRef",
+        "Column_Golden_Value": "RlfProfile=0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qci2"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "rlfProfileRef",
+        "Column_Golden_Value": "RlfProfile=0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qci3"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "rlfProfileRef",
+        "Column_Golden_Value": "RlfProfile=0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qci4"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "rlfProfileRef",
+        "Column_Golden_Value": "RlfProfile=0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qci5"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "rlfProfileRef",
+        "Column_Golden_Value": "RlfProfile=0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qci6"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "rlfProfileRef",
+        "Column_Golden_Value": "RlfProfile=0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qci7"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "rlfProfileRef",
+        "Column_Golden_Value": "RlfProfile=0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qci8"
+    },
+    {
+        "Table": "ER_L_QciProfilePredefined",
+        "Column": "rlfProfileRef",
+        "Column_Golden_Value": "RlfProfile=0",
+        "Join_Column": "DimensionId",
+        "Condition_Table_1": "ER_L_QciProfilePredefined",
+        "Condition_Table_1_Column": "qciProfilePredefinedId",
+        "Condition_Table_1_Column_Value": "qci9"
+    }
+]
