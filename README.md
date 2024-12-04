@@ -1,2 +1,1 @@
-# Ericssion_LTE_GPL_Auditp
-llllllllllllllllmmlllllllllll
+# Ericssion_LTE_GPL_Audit
