@@ -1,5 +1,5 @@
 import argparse
-import psycopg2
+#import psycopg2
 import csv
 # Define database connection parameters
 DB_NAME = "UniversalNetworkDataHub_Jamaica"
