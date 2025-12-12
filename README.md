@@ -6,7 +6,7 @@ A comprehensive **Telecom Network Parameter Auditing System** designed to valida
 ![PostgreSQL](https://img.shields.io/badge/database-PostgreSQL-336791.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-## Table of Contents
+## Table of Contents.
 
 - [Overview](#overview)
 - [Features](#features)
