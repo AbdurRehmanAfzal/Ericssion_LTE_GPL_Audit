@@ -1,6 +1,6 @@
 # Ericsson LTE GPL Audit System
 
-A comprehensive **Telecom Network Parameter Auditing System** designed to validate and audit configuration parameters for LTE (4G) and WCDMA (3G) networks across Ericsson and Huawei equipment. The system automates the comparison of current network configurations against "golden" (ideal) parameter values and generates detailed audit reports..
+A comprehensive **Telecom Network Parameter Auditing System** designed to validate and audit configuration parameters for LTE (4G) and WCDMA (3G) networks across Ericsson and Huawei equipment. The system automates the comparison of current network configurations against "golden" (ideal) parameter values and generates detailed audit reports.
 
 ![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
 ![PostgreSQL](https://img.shields.io/badge/database-PostgreSQL-336791.svg)
